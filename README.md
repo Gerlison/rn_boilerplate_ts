@@ -17,7 +17,7 @@ Every time I need to create a project, I need to set a lot of repeatitive config
 To create a project with this template just run the following on your terminal:
 
 ```shell
-$ npx @react-native-community/cli init [project_name] --template @gerlison/rn-boilerplate
+$ npx @react-native-community/cli init [project_name] --template @gerlison/rn-boilerplate-ts
 ```
 
 Ok, let's run the project
@@ -59,6 +59,7 @@ src
 │        │   index.js
 └───navigation
 │    │   index.js
+│    │   types.d.js
 └───shared
 │   └───core/
 │   └───styles
