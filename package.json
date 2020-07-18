@@ -1,6 +1,6 @@
 {
-  "name": "@gerlison/rn-boilerplate",
-  "version": "1.1.0",
+  "name": "@gerlison/rn-boilerplate_ts",
+  "version": "0.0.1",
   "description": "A react-native template",
   "keywords": [
     "react-native",
@@ -10,10 +10,11 @@
     "babel-module-resolver",
     "axios",
     "redux",
-    "redux-thunk"
+    "redux-thunk",
+    "typescript"
   ],
-  "repository": "https://github.com/Gerlison/rn_boilerplate.git",
-  "homepage": "https://github.com/Gerlison/rn_boilerplate#readme",
+  "repository": "https://github.com/Gerlison/rn_boilerplate_ts.git",
+  "homepage": "https://github.com/Gerlison/rn_boilerplate_ts#readme",
   "author": "Gerlison <franciscojerlison1@gmail.com>",
   "license": "MIT"
 }

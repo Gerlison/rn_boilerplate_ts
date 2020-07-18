@@ -1,5 +1,5 @@
-[![npm (scoped)](https://img.shields.io/npm/v/@gerlison/rn-boilerplate?style=social)](https://www.npmjs.com/package/@gerlison/rn-boilerplate) 
-[![GitHub](https://img.shields.io/github/license/Gerlison/rn_boilerplate?style=social)](https://github.com/Gerlison/rn_boilerplate/blob/master/LICENSE)
+[![npm (scoped)](https://img.shields.io/npm/v/@gerlison/rn-boilerplate_ts?style=social)](https://www.npmjs.com/package/@gerlison/rn-boilerplate_ts)
+[![GitHub](https://img.shields.io/github/license/Gerlison/rn_boilerplate_ts?style=social)](https://github.com/Gerlison/rn_boilerplate_ts/blob/master/LICENSE)
 
 # REACT-NATIVE BOILERPLATE
 
@@ -101,6 +101,7 @@ src
 
 ## Built with
 
+- [Typescript](https://www.typescriptlang.org/) - Typing system
 - [React-Native](https://facebook.github.io/react-native/) - Build the native app using JavaScript and React
 - [React-Navigation](https://reactnavigation.org/docs/en/getting-started.html) - Router
 - [Redux](https://redux.js.org/) - React State Manager
