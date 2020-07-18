@@ -4,7 +4,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Sample from '@modules/sample';
 
-const Stack = createStackNavigator();
+import { RootStackParamList } from '@navigation/types';
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 const MainNavigator = () => (
   <NavigationContainer>

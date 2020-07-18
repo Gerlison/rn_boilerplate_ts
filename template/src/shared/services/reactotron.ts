@@ -3,7 +3,7 @@ import { reactotronRedux } from 'reactotron-redux';
 import AsyncStorage from '@react-native-community/async-storage';
 
 const Reactotron = tron
-  .setAsyncStorageHandler(AsyncStorage)
+  .setAsyncStorageHandler?.(AsyncStorage)
   .configure()
   .useReactNative({
     asyncStorage: false,
@@ -16,7 +16,7 @@ const Reactotron = tron
   .use(reactotronRedux());
 
 if (__DEV__) {
-  Reactotron.connect().clear();
+  Reactotron?.connect?.().clear?.();
 }
 
 export default Reactotron;

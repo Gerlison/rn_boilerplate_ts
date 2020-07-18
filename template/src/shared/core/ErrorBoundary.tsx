@@ -2,11 +2,19 @@ import React, { Component } from 'react';
 import { SafeAreaView } from 'react-native';
 import styled from 'styled-components/native';
 
-import { sizing } from '@styles/fonts';
 import Text from '@core/Text';
 
-class ErrorBoundary extends Component {
-  constructor(props) {
+import { sizing } from '@styles/fonts';
+
+import { Styled } from '@core/types';
+
+interface State {
+  hasError: boolean;
+  error: null | Error;
+}
+
+class ErrorBoundary extends Component<{}, State> {
+  constructor(props: {}) {
     super(props);
     this.state = {
       hasError: false,
@@ -14,7 +22,7 @@ class ErrorBoundary extends Component {
     };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error) {
     return { hasError: true, error };
   }
 
@@ -46,15 +54,15 @@ class ErrorBoundary extends Component {
   }
 }
 
-const StyledScrollView = styled.ScrollView.attrs(() => ({
+const StyledScrollView = styled.ScrollView.attrs({
   contentContainerStyle: {
     flexGrow: 1,
     justifyContent: 'center',
     padding: sizing.MEDIUM,
   },
-}))``;
+})``;
 
-const StyledStatusBar = styled.StatusBar.attrs(({ theme }) => ({
+const StyledStatusBar = styled.StatusBar.attrs(({ theme }: Styled) => ({
   backgroundColor: theme.BACKGROUND,
   barStyle: 'dark-content',
 }))``;
