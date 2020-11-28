@@ -8,7 +8,7 @@ import {
   ActivityIndicatorProps,
 } from 'react-native';
 import { styling, sizing } from '@styles/fonts';
-import { Theme, ThemeState } from '@store/ducks/Theme/types';
+import { Theme, ThemeState } from '@store/slices/Theme/types';
 
 /**
  *

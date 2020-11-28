@@ -51,8 +51,8 @@ src
 │        └───services/
 │             |   api.js
 │        └───store/
-│             └───ducks/
-│             └───useCases/
+│             └───slices/
+│             └───sagas/
 │             │   index.js
 │        └───components/
 │        └───screens/
@@ -71,8 +71,8 @@ src
 │        |   api.js
 |        |   reactotron.js
 └───store/
-│    └───ducks/
-│    └───useCases/
+│    └───slices/
+│    └───sagas/
 │    │   index.js
 ```
 
@@ -81,7 +81,7 @@ src
   - With that, you can import your files using the alias `@modules/`, `@core/`, etc.
 - Redux ready to go.
   - Redux is explained by it self.
-  - Here I've implemented it following a little modified duck pattern. The difference in this template, is that each feature have it's own ducks and useCases. You can see that in the tree above.
+  - Here I've implemented it following a little modified duck pattern. The difference in this template, is that each feature have it's own slices and sagas. You can see that in the tree above.
 - Theme provider integrated with styled-components, for easy theme management
   - An amazing tool that gives to your component so much more intuitivity. It has also the power of letting you manage theme colors shared in the entire app. Making it easier to use the colors without import any files.
   - You can customize it to share whatever you want. But be careful to not overload.
@@ -105,8 +105,8 @@ src
 - [Typescript](https://www.typescriptlang.org/) - Typing system
 - [React-Native](https://facebook.github.io/react-native/) - Build the native app using JavaScript and React
 - [React-Navigation](https://reactnavigation.org/docs/en/getting-started.html) - Router
-- [Redux](https://redux.js.org/) - React State Manager
-- [Redux-Thunk](https://github.com/reduxjs/redux-thunk) - Thunk middleware for Redux.
+- [Redux-Toolkit](https://redux-toolkit.js.org/) - React State Manager toolkit
+- [Redux-Saga](https://redux-saga.js.org/) - Saga middleware for Redux.
 - [Axios](https://github.com/axios/axios) - HTTP Client
 - [ESlint](https://eslint.org/) - Linter
 - [Styled-Components](https://www.styled-components.com/) - Styles
