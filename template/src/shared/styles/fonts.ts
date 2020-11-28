@@ -33,4 +33,4 @@ export type Sizing = typeof sizing;
 export type Icon = typeof icon;
 export type Styling = typeof styling;
 
-export default { sizing, icon, styling };
+export { sizing, icon, styling };
