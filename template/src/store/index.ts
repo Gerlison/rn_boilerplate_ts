@@ -1,24 +1,23 @@
-import {
-  createStore,
-  combineReducers,
-  applyMiddleware,
-  compose,
-  StoreEnhancer,
-} from 'redux';
-import thunk from 'redux-thunk';
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { TypedUseSelectorHook, useSelector } from 'react-redux';
+import createSagaMiddleware from 'redux-saga';
 
 import reactotron from '@services/reactotron';
 
-import globalDucks from './ducks';
+import sharedSlices from './slices';
+import sharedSagas from './sagas';
 
-const reducers = combineReducers({ ...globalDucks });
-export type RootState = ReturnType<typeof reducers>;
+const reducer = combineReducers({ ...sharedSlices });
+export type RootState = ReturnType<typeof reducer>;
 
-const middlewares: StoreEnhancer<{}, RootState> = compose(
-  applyMiddleware(thunk),
-  __DEV__ && reactotron?.createEnhancer
-    ? reactotron?.createEnhancer()
-    : () => {},
-);
+export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
 
-export default createStore(reducers, middlewares);
+const sagaMiddleware = createSagaMiddleware();
+
+export default configureStore({
+  reducer,
+  middleware: [sagaMiddleware],
+  enhancers: __DEV__ ? [reactotron!.createEnhancer!()] : undefined,
+});
+
+sagaMiddleware.run(sharedSagas);
